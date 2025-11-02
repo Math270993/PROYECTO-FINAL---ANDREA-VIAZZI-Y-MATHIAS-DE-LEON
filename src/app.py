@@ -14,7 +14,7 @@ class App:
         self.frame = ttk.Frame(root, padding=10)
         self.frame.pack(fill="both", expand=True)
 
-        # --- Filtros ---
+        # Filtros
         filtros = ttk.Frame(self.frame)
         filtros.pack(fill="x", pady=5)
 
@@ -33,7 +33,7 @@ class App:
         ttk.Button(filtros, text="Filtrar", command=self.mostrar_datos).pack(side="left", padx=5)
         ttk.Button(filtros, text="Exportar CSV", command=self.exportar_csv).pack(side="left")
 
-        # --- Tabla ---
+        # Tabla
         columnas = ("id", "fecha", "estudiante", "tema", "estado", "comentario")
         self.tabla = ttk.Treeview(self.frame, columns=columnas, show="headings")
         for col in columnas:
@@ -41,7 +41,7 @@ class App:
             self.tabla.column(col, width=120)
         self.tabla.pack(fill="both", expand=True, pady=5)
 
-        # --- Botones CRUD ---
+        # Botones CRUD
         botones = ttk.Frame(self.frame)
         botones.pack(fill="x", pady=10)
 
@@ -52,7 +52,7 @@ class App:
 
         self.mostrar_datos()
 
-    # --- CRUD ---
+    # CRUD
     def mostrar_datos(self):
         for i in self.tabla.get_children():
             self.tabla.delete(i)
@@ -108,7 +108,7 @@ class App:
             writer.writerows(tutorias)
         messagebox.showinfo("Exportado", f"Datos exportados correctamente a {os.path.basename(ruta)}")
 
-    # --- Ventana de edición ---
+    # Ventana de edición
     def _ventana_edicion(self, id_tutoria=None):
         win = tk.Toplevel(self.root)
         win.title("Editar tutoría" if id_tutoria else "Nueva tutoría")
@@ -140,4 +140,5 @@ class App:
 if __name__ == "__main__":
     root = tk.Tk()
     app = App(root)
+
     root.mainloop()

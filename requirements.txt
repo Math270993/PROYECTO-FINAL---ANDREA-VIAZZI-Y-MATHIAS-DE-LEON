@@ -1,0 +1,7 @@
+pytest>=6.0
+matplotlib>=3.0
+Pillow>=8.0
+
+tk
+pytest
+reportlab

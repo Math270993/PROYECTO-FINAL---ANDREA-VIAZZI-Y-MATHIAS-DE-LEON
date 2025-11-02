@@ -1,22 +1,3 @@
-pytest>=6.0
-matplotlib>=3.0
-Pillow>=8.0
-
-tk
-pytest
-reportlab
-
-python-dotenv
-
-# Librerías para la UI y persistencia
-tkinter  # viene con Python, pero lo dejamos comentado para referencia
-
-# Persistencia y manejo de archivos
-python-dotenv==1.0.1  # para leer el archivo .env
-matplotlib==3.8.0     # opcional, si quieres gráficos futuros
-
-# Testing
-pytest==7.4.0          # pruebas unitarias
-
-# IA (opcional, solo si usan OpenAI o similar)
-# openai==0.27.0       # descomentar si integran IA real
+pytest==8.4.2
+python-dotenv==1.0.1
+reportlab==4.4.4

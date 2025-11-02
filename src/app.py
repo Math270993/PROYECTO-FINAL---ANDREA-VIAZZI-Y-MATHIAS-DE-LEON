@@ -1,3 +1,14 @@
+from dotenv import load_dotenv
+import os
+
+# Cargar variables del archivo .env
+load_dotenv()
+
+# Leer variables
+DEBUG = os.getenv("DEBUG", "False") == "True"
+DATA_PATH = os.getenv("DATA_PATH", "./data/tareas.json")
+
+
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 import csv
@@ -142,3 +153,4 @@ if __name__ == "__main__":
     app = App(root)
 
     root.mainloop()
+

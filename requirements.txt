@@ -5,3 +5,5 @@ Pillow>=8.0
 tk
 pytest
 reportlab
+
+python-dotenv

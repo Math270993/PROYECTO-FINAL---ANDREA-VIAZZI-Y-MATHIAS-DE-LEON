@@ -28,28 +28,38 @@ Desarrollado como parte del **curso final de Programación (CeRP del Suroeste, 2
 ## Pruebas automáticas
 Las pruebas se implementan con **pytest**.  
 Se validan los módulos `Storage` y `Agenda` para asegurar su correcto funcionamiento.  
-Todos los tests deben pasar sin errores:
+Todas las pruebas deben pasar sin errores:
 
 ```bash
 python -m pytest -q
 # Resultado esperado:
 # ....  [100%]  -> 4 passed in 0.08s
+```
+
+
+---
 
 # Instalación y uso
-## Clonar el repositorio
+
+##1️⃣ Clonar el repositorio
+```bash
 git clone https://github.com/Math270993/PROYECTO-FINAL---ANDREA-VIAZZI-Y-MATHIAS-DE-LEON.git
 cd PROYECTO-FINAL---ANDREA-VIAZZI-Y-MATHIAS-DE-LEON-main
-
-## Crear entorno virtual e instalar dependencias
+```
+##2️⃣ Crear entorno virtual e instalar dependencias
+```bash
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-
-## Ejecutar la aplicación
+```
+##3️⃣ Ejecutar la aplicación
+```bash
 python -m src.app
---
+```
 
 # Estructura del proyecto
+
+```bash
 ├── data/
 │   └── agenda.json
 ├── src/
@@ -65,12 +75,16 @@ python -m src.app
 ├── README.md
 ├── requirements.txt
 └── pytest.ini
---
+
+```
 
 # Versión
 v1.0.0 – versión estable
+
 CRUD + Agenda + GUI + 4/4 tests exitosos
 
 # Autores
+
 Matías de León – CeRP del Suroeste
+
 Andrea Viazzi – CeRP del Suroeste
